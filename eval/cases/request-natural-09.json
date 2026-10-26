@@ -1,0 +1,40 @@
+{
+  "id": "request-natural-09",
+  "kind": "request",
+  "tags": ["先週"],
+  "now": "2026-10-25T08:00:00.000Z",
+  "requestText": "先週の動きを振り返って",
+  "participants": [
+    {
+      "userId": "U0TANAKA",
+      "name": "田中"
+    },
+    {
+      "userId": "U0SATO",
+      "name": "佐藤"
+    }
+  ],
+  "messages": [
+    {
+      "ts": "1792890000.000100",
+      "user": "U0TANAKA",
+      "text": "資料を共有しました。読みやすく整理しました。"
+    }
+  ],
+  "expected": {
+    "request": {
+      "kind": "findings",
+      "suppressTodo": false,
+      "suppressCanvas": false,
+      "period": {
+        "start": "2026-10-11T15:00:00.000Z",
+        "end": "2026-10-18T15:00:00.000Z",
+        "clamped": false
+      }
+    },
+    "effects": {
+      "todoAssignees": [],
+      "canvasWrites": false
+    }
+  }
+}

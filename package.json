@@ -1,0 +1,49 @@
+{
+  "name": "arbalest",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "overrides": {
+    "@microsoft/teams.apps": {
+      "@azure/msal-node": "^7.1.0"
+    }
+  },
+  "scripts": {
+    "lint": "biome check .",
+    "format": "biome format --write .",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc -p tsconfig.build.json",
+    "test": "vitest run",
+    "test:firestore": "vitest run -c vitest.firestore.config.ts",
+    "eval": "tsx eval/run.ts",
+    "teams:package": "tsx scripts/package-teams.ts",
+    "start": "node dist/main.js"
+  },
+  "dependencies": {
+    "@google-cloud/firestore": "^9.4.0",
+    "@google-cloud/tasks": "^7.3.1",
+    "@microsoft/teams.apps": "^2.1.1",
+    "@slack/bolt": "^5.1.0",
+    "@slack/web-api": "^8.2.0",
+    "date-fns": "^4.4.0",
+    "date-fns-tz": "^3.2.0",
+    "gpt-tokenizer": "^4.1.0",
+    "htmlparser2": "^12.0.0",
+    "openai": "^7.43.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.6.3",
+    "@types/node": "^22",
+    "fast-check": "^4.10.2",
+    "fflate": "^0.8.3",
+    "light-my-request": "^6.8.0",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.5"
+  }
+}

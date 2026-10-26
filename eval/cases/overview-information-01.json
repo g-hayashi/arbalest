@@ -1,0 +1,40 @@
+{
+  "id": "overview-information-01",
+  "kind": "summarize",
+  "tags": ["調整なし", "概要", "情報共有"],
+  "now": "2026-10-25T08:00:00.000Z",
+  "participants": [
+    {
+      "userId": "U0TANAKA",
+      "name": "田中"
+    },
+    {
+      "userId": "U0SATO",
+      "name": "佐藤"
+    }
+  ],
+  "messages": [
+    {
+      "ts": "1792890000.000100",
+      "user": "U0TANAKA",
+      "text": "利用ガイドを更新して共有しました。検索の手順を図で説明しています。"
+    },
+    {
+      "ts": "1792890060.000100",
+      "user": "U0SATO",
+      "text": "図で検索手順が分かりやすくなりました。",
+      "threadTs": "1792890000.000100"
+    }
+  ],
+  "expected": {
+    "decided": [],
+    "open": [],
+    "todos": [],
+    "overview": [
+      {
+        "evidenceTs": ["1792890000.000100"],
+        "textIncludesAny": ["利用ガイド", "検索の手順", "検索手順"]
+      }
+    ]
+  }
+}

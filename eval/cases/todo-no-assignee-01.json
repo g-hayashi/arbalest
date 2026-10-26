@@ -1,0 +1,36 @@
+{
+  "id": "todo-no-assignee-01",
+  "kind": "summarize",
+  "tags": ["ToDo", "担当者なし"],
+  "now": "2026-10-23T18:00:00+09:00",
+  "participants": [
+    { "userId": "U0TANAKA", "name": "田中" },
+    { "userId": "U0SATO", "name": "佐藤" }
+  ],
+  "messages": [
+    {
+      "ts": "1792717200.000100",
+      "user": "U0TANAKA",
+      "text": "備品の発注が必要です。11/10までに手配しないといけません。"
+    },
+    {
+      "ts": "1792717800.000100",
+      "user": "U0SATO",
+      "threadTs": "1792717200.000100",
+      "text": "そうですね。誰かが手配しないとですね。"
+    }
+  ],
+  "expected": {
+    "decided": [],
+    "open": [],
+    "todos": [
+      {
+        "textIncludes": "備品",
+        "assignee": null,
+        "due": "2026-11-10",
+        "evidenceTs": ["1792717200.000100", "1792717800.000100"]
+      }
+    ],
+    "mustNotDecide": []
+  }
+}

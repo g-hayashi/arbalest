@@ -1,0 +1,46 @@
+{
+  "id": "followup-todo-01",
+  "kind": "summarize",
+  "tags": ["ToDo", "followUp"],
+  "now": "2026-10-23T18:00:00+09:00",
+  "participants": [
+    { "userId": "U0TANAKA", "name": "田中" },
+    { "userId": "U0SATO", "name": "佐藤" }
+  ],
+  "messages": [
+    {
+      "ts": "1792717200.000100",
+      "user": "U0TANAKA",
+      "text": "来週の定例の資料を準備しないといけませんね。"
+    },
+    {
+      "ts": "1792717800.000100",
+      "user": "U0SATO",
+      "threadTs": "1792717200.000100",
+      "text": "資料は私がやります。"
+    }
+  ],
+  "followUp": {
+    "messages": [
+      {
+        "ts": "1792729200.000100",
+        "user": "U0SATO",
+        "threadTs": "1792717200.000100",
+        "text": "資料は 11/2(月) までに共有します。"
+      }
+    ]
+  },
+  "expected": {
+    "decided": [],
+    "open": [],
+    "todos": [
+      {
+        "textIncludes": "資料",
+        "assignee": "U0SATO",
+        "due": "2026-11-02",
+        "evidenceTs": ["1792717800.000100", "1792729200.000100"]
+      }
+    ],
+    "mustNotDecide": []
+  }
+}

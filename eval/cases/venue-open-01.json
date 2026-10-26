@@ -1,0 +1,37 @@
+{
+  "id": "venue-open-01",
+  "kind": "summarize",
+  "tags": ["日程調整", "回答待ち"],
+  "now": "2026-10-23T18:00:00+09:00",
+  "participants": [
+    { "userId": "U0TANAKA", "name": "田中" },
+    { "userId": "U0SATO", "name": "佐藤" },
+    { "userId": "U0SUZUKI", "name": "鈴木" },
+    { "userId": "U0TAKAHASHI", "name": "高橋" }
+  ],
+  "messages": [
+    {
+      "ts": "1792717200.000100",
+      "user": "U0TANAKA",
+      "text": "会場はオンラインか、対面（本社の会議室）かで迷っています。<@U0SATO> <@U0SUZUKI> <@U0TAKAHASHI> どちらがいいですか。"
+    },
+    {
+      "ts": "1792717800.000100",
+      "user": "U0SATO",
+      "threadTs": "1792717200.000100",
+      "text": "オンラインがいいです。"
+    },
+    {
+      "ts": "1792718400.000100",
+      "user": "U0SUZUKI",
+      "threadTs": "1792717200.000100",
+      "text": "私は対面がいいです。"
+    }
+  ],
+  "expected": {
+    "decided": [],
+    "open": [{ "topic": "会場", "pending": ["U0TAKAHASHI"] }],
+    "todos": [],
+    "mustNotDecide": ["会場"]
+  }
+}

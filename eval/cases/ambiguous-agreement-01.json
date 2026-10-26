@@ -1,0 +1,36 @@
+{
+  "id": "ambiguous-agreement-01",
+  "kind": "summarize",
+  "tags": ["日程調整", "あいまいな合意"],
+  "now": "2026-10-23T18:00:00+09:00",
+  "participants": [
+    { "userId": "U0TANAKA", "name": "田中" },
+    { "userId": "U0SATO", "name": "佐藤" },
+    { "userId": "U0SUZUKI", "name": "鈴木" }
+  ],
+  "messages": [
+    {
+      "ts": "1792717200.000100",
+      "user": "U0TANAKA",
+      "text": "歓迎会を 11/4(水) 18:00 で考えています。<@U0SATO> <@U0SUZUKI> いかがでしょうか。"
+    },
+    {
+      "ts": "1792717800.000100",
+      "user": "U0SATO",
+      "threadTs": "1792717200.000100",
+      "text": "4日で大丈夫です！"
+    },
+    {
+      "ts": "1792718400.000100",
+      "user": "U0SUZUKI",
+      "threadTs": "1792717200.000100",
+      "text": "その日は別の予定が入るかもしれませんが、たぶん大丈夫かと思います。確定したらまた連絡します。"
+    }
+  ],
+  "expected": {
+    "decided": [],
+    "open": [{ "topic": "歓迎会" }],
+    "todos": [],
+    "mustNotDecide": ["歓迎会"]
+  }
+}

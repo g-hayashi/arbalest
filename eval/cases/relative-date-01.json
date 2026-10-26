@@ -1,0 +1,49 @@
+{
+  "id": "relative-date-01",
+  "kind": "summarize",
+  "tags": ["ToDo", "相対日付"],
+  "now": "2026-10-23T18:00:00+09:00",
+  "participants": [
+    { "userId": "U0TANAKA", "name": "田中" },
+    { "userId": "U0SATO", "name": "佐藤" },
+    { "userId": "U0SUZUKI", "name": "鈴木" }
+  ],
+  "messages": [
+    {
+      "ts": "1792717200.000100",
+      "user": "U0SUZUKI",
+      "text": "田中さん、来週火曜までに会議室を予約してください。"
+    },
+    {
+      "ts": "1792717800.000100",
+      "user": "U0TANAKA",
+      "threadTs": "1792717200.000100",
+      "text": "了解です。"
+    },
+    {
+      "ts": "1792718400.000100",
+      "user": "U0SATO",
+      "threadTs": "1792717200.000100",
+      "text": "あと、資料は私が来週金曜までに共有します。"
+    }
+  ],
+  "expected": {
+    "decided": [],
+    "open": [],
+    "todos": [
+      {
+        "textIncludes": "会議室",
+        "assignee": "U0TANAKA",
+        "due": "2026-10-27",
+        "evidenceTs": ["1792717200.000100", "1792717800.000100"]
+      },
+      {
+        "textIncludes": "資料",
+        "assignee": "U0SATO",
+        "due": "2026-10-30",
+        "evidenceTs": ["1792718400.000100"]
+      }
+    ],
+    "mustNotDecide": []
+  }
+}

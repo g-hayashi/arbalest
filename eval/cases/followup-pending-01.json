@@ -1,0 +1,82 @@
+{
+  "id": "followup-pending-01",
+  "kind": "summarize",
+  "tags": ["日程調整", "followUp", "回答待ち"],
+  "now": "2026-10-23T18:00:00+09:00",
+  "participants": [
+    {
+      "userId": "U0TANAKA",
+      "name": "田中"
+    },
+    {
+      "userId": "U0SATO",
+      "name": "佐藤"
+    },
+    {
+      "userId": "U0SUZUKI",
+      "name": "鈴木"
+    },
+    {
+      "userId": "U0TAKAHASHI",
+      "name": "高橋"
+    }
+  ],
+  "messages": [
+    {
+      "ts": "1792717200.000100",
+      "user": "U0TANAKA",
+      "text": "懇親会を 11/6(金) 19:00 にしたいです。<@U0SATO> <@U0SUZUKI> <@U0TAKAHASHI> ご都合はいかがですか。"
+    },
+    {
+      "ts": "1792717800.000100",
+      "user": "U0SATO",
+      "threadTs": "1792717200.000100",
+      "text": "6日で大丈夫です。"
+    },
+    {
+      "ts": "1792718400.000100",
+      "user": "U0SUZUKI",
+      "threadTs": "1792717200.000100",
+      "text": "私も6日で問題ありません。"
+    }
+  ],
+  "followUp": {
+    "messages": [
+      {
+        "ts": "1792729200.000100",
+        "user": "U0TAKAHASHI",
+        "threadTs": "1792717200.000100",
+        "text": "予定を確認します。たぶん大丈夫だと思いますが、もう少し待ってください。"
+      },
+      {
+        "ts": "1792729800.000100",
+        "user": "U0TANAKA",
+        "threadTs": "1792717200.000100",
+        "text": "了解です。お店の候補も考えておきます。"
+      }
+    ]
+  },
+  "expected": {
+    "decided": [],
+    "open": [
+      {
+        "topic": "懇親会"
+      }
+    ],
+    "todos": [
+      {
+        "textIncludes": "予定",
+        "assignee": "U0TAKAHASHI",
+        "due": null,
+        "evidenceTs": ["1792729200.000100"]
+      },
+      {
+        "textIncludes": "お店",
+        "assignee": "U0TANAKA",
+        "due": null,
+        "evidenceTs": ["1792729800.000100"]
+      }
+    ],
+    "mustNotDecide": ["懇親会"]
+  }
+}

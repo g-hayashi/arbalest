@@ -1,0 +1,46 @@
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.20/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.20",
+  "version": "0.1.0",
+  "id": "{{APP_ID}}",
+  "developer": {
+    "name": "Arbalest",
+    "websiteUrl": "{{WEBSITE_URL}}",
+    "privacyUrl": "{{PRIVACY_URL}}",
+    "termsOfUseUrl": "{{TERMS_URL}}"
+  },
+  "name": { "short": "Arbalest", "full": "Arbalest 会話分析" },
+  "description": {
+    "short": "標準チャネルの会話を根拠付きでまとめます。",
+    "full": "メンションしたスレッドの概要、決定事項、未決定事項、ToDo、問いを表示します。findings 7 で直近7日のチャネルを振り返れます。ToDoの登録・完了・通知と外部文書への記録は初版では未対応です。"
+  },
+  "icons": { "outline": "outline.png", "color": "color.png" },
+  "accentColor": "#244F69",
+  "bots": [
+    {
+      "botId": "{{APP_ID}}",
+      "scopes": ["team"],
+      "isNotificationOnly": false,
+      "supportsFiles": false,
+      "commandLists": [
+        {
+          "scopes": ["team"],
+          "commands": [
+            { "title": "まとめ", "description": "このスレッドの概要・調整事項を表示" },
+            { "title": "findings 7", "description": "チャネルの直近7日を振り返る（最大90日）" }
+          ]
+        }
+      ]
+    }
+  ],
+  "webApplicationInfo": { "id": "{{APP_ID}}", "resource": "api://{{APP_ID}}" },
+  "authorization": {
+    "permissions": {
+      "resourceSpecific": [
+        { "name": "ChannelMessage.Read.Group", "type": "Application" },
+        { "name": "ChannelSettings.Read.Group", "type": "Application" }
+      ]
+    }
+  },
+  "validDomains": []
+}

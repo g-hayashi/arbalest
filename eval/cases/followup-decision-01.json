@@ -1,0 +1,52 @@
+{
+  "id": "followup-decision-01",
+  "kind": "summarize",
+  "tags": ["日程調整", "followUp"],
+  "now": "2026-10-23T18:00:00+09:00",
+  "participants": [
+    { "userId": "U0TANAKA", "name": "田中" },
+    { "userId": "U0SATO", "name": "佐藤" },
+    { "userId": "U0SUZUKI", "name": "鈴木" }
+  ],
+  "messages": [
+    {
+      "ts": "1792717200.000100",
+      "user": "U0TANAKA",
+      "text": "勉強会の日程です。<@U0SATO> <@U0SUZUKI> 候補は 11/12(木) 17:00 か 11/13(金) 17:00 です。"
+    },
+    {
+      "ts": "1792717800.000100",
+      "user": "U0SATO",
+      "threadTs": "1792717200.000100",
+      "text": "12日でお願いします"
+    },
+    {
+      "ts": "1792718400.000100",
+      "user": "U0TANAKA",
+      "threadTs": "1792717200.000100",
+      "text": "鈴木さんはいかがですか？"
+    }
+  ],
+  "followUp": {
+    "messages": [
+      {
+        "ts": "1792729200.000100",
+        "user": "U0SUZUKI",
+        "threadTs": "1792717200.000100",
+        "text": "遅くなりました。12日の17時で大丈夫です。"
+      }
+    ]
+  },
+  "expected": {
+    "decided": [
+      {
+        "topic": "勉強会の日程",
+        "optionLabelIncludes": "11/12",
+        "evidenceTs": ["1792717200.000100", "1792717800.000100", "1792729200.000100"]
+      }
+    ],
+    "open": [],
+    "todos": [],
+    "mustNotDecide": []
+  }
+}

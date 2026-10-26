@@ -1,0 +1,53 @@
+{
+  "id": "chitchat-only-01",
+  "kind": "summarize",
+  "tags": ["雑談のみ"],
+  "now": "2026-10-23T18:00:00+09:00",
+  "participants": [
+    { "userId": "U0TANAKA", "name": "田中" },
+    { "userId": "U0SATO", "name": "佐藤" },
+    { "userId": "U0SUZUKI", "name": "鈴木" }
+  ],
+  "messages": [
+    {
+      "ts": "1792717200.000100",
+      "user": "U0TANAKA",
+      "text": "おはようございます。今朝はずいぶん寒いですね。"
+    },
+    {
+      "ts": "1792717800.000100",
+      "user": "U0SATO",
+      "threadTs": "1792717200.000100",
+      "text": "本当に。コートを出しました。"
+    },
+    {
+      "ts": "1792718400.000100",
+      "user": "U0SUZUKI",
+      "threadTs": "1792717200.000100",
+      "text": "昨日の試合、見ましたか？ すごかったですね。",
+      "reactions": [{ "name": "joy", "users": ["U0TANAKA"] }]
+    },
+    {
+      "ts": "1792719000.000100",
+      "user": "U0TANAKA",
+      "threadTs": "1792717200.000100",
+      "text": "見ました！ 最後の逆転は鳥肌が立ちました。"
+    }
+  ],
+  "expected": {
+    "overview": [
+      {
+        "evidenceTs": ["1792717200.000100", "1792717800.000100"],
+        "textIncludesAny": ["寒", "冷え", "コート"]
+      },
+      {
+        "evidenceTs": ["1792718400.000100", "1792719000.000100"],
+        "textIncludesAny": ["試合", "逆転"]
+      }
+    ],
+    "decided": [],
+    "open": [],
+    "todos": [],
+    "mustNotDecide": []
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "id": "schedule-basic-01",
+  "kind": "summarize",
+  "tags": ["日程調整", "日程の基本"],
+  "now": "2026-10-23T18:00:00+09:00",
+  "participants": [
+    { "userId": "U0TANAKA", "name": "田中" },
+    { "userId": "U0SATO", "name": "佐藤" },
+    { "userId": "U0SUZUKI", "name": "鈴木" }
+  ],
+  "messages": [
+    {
+      "ts": "1792717200.000100",
+      "user": "U0TANAKA",
+      "text": "定例会議の日程を決めたいです。<@U0SATO> <@U0SUZUKI> 候補は 10/28(水) 15:00 か 10/29(木) 10:00 です。"
+    },
+    {
+      "ts": "1792717800.000100",
+      "user": "U0SATO",
+      "threadTs": "1792717200.000100",
+      "text": "28日の15時で大丈夫です"
+    },
+    {
+      "ts": "1792718400.000100",
+      "user": "U0SUZUKI",
+      "threadTs": "1792717200.000100",
+      "text": "私も28日で問題ありません"
+    }
+  ],
+  "expected": {
+    "decided": [
+      {
+        "topic": "定例会議の日程",
+        "optionLabelIncludes": "10/28",
+        "evidenceTs": ["1792717200.000100", "1792717800.000100", "1792718400.000100"]
+      }
+    ],
+    "open": [],
+    "todos": [],
+    "mustNotDecide": []
+  }
+}

@@ -1,0 +1,17 @@
+node_modules
+dist
+coverage
+.tmp
+.git
+.claude
+.specify
+specs
+docs
+tests
+eval
+.env
+.env.*
+*.log
+.DS_Store
+Dockerfile
+.dockerignore
